@@ -137,10 +137,14 @@ class CMakePreset:
                     print('VS15CL:' + os.environ['VS150CLPATH'])
                     outString = outString + ' -DCUDA_HOST_COMPILER=' + \
                         os.environ['VS150CLPATH']
-                if self.compiler == 'vc16':
+                elif self.compiler == 'vc16':
                     print('VS16CL:' + os.environ['VS160CLPATH'])
                     outString = outString + ' -DCUDA_HOST_COMPILER=' + \
                         os.environ['VS160CLPATH']
+                elif self.compiler == 'vc17':
+                    print('VS17CL:' + os.environ['VS170CLPATH'])
+                    outString = outString + ' -DCUDA_HOST_COMPILER=' + \
+                        os.environ['VS170CLPATH']
 
         return outString
 
